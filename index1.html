@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Registrasi</title>
+    <style>
+    div {
+            background-color: rgba(211, 211, 211, 0.434);
+            width: 400px;
+            padding: 50px ;
+            margin: 20px auto;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+</style>
+</head>
+<body style="background-image: url('y.jpg'); background-size: cover; background-position: center;">
+    <div>
+        <h1 style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Formulir Pendaftaran Siswa Baru</h1>
+        <hr>
+    <form action="proses.php" method="POST" enctype="multipart/form-data">
+        <label for="nama">Nama Lengkap:</label><br>
+        <input type="text" id="nama" name="nama" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <label>Jenis Kelamin:</label><br>
+        <input type="radio" name="gender" value="Laki-laki" required> Laki-laki
+        <input type="radio" name="gender" value="Perempuan"> Perempuan<br><br>
+
+        <label>Hobi:</label><br>
+        <input type="checkbox" name="hobi[]" value="Membaca"> Membaca
+        <input type="checkbox" name="hobi[]" value="Coding"> Coding
+        <input type="checkbox" name="hobi[]" value="Gaming"> Gaming<br><br>
+
+        <label for="kelas">Pilih Kelas:</label><br>
+        <select name="kelas" id="kelas" required>
+            <option value="">Pilih Kelas</option>
+            <hr>
+            <option value="XI RPL 1">XI RPL 1</option>
+            <option value="XI RPL 2">XI RPL 2</option>
+            <option value="XI RPL 3">XI RPL 2</option>
+        </select><br><br>
+
+        <label for="jurusan">Pilih Jurusan:</label><br>
+        <select name="jurusan" id="jurusan" required>
+            <option value="">Pilih Jurusan</option>
+            <hr>
+            <option value="RPL"> RPL (Rekayasa Perangkat Lunak)</option>
+            <option value="TKJ"> TKJ (Teknik Komputer dan Jaringan)</option>
+            <option value="RPL"> DKV (Desain Komunikasi dan Visual)</option>
+            <option value="RPL"> TM (Teknik Mekatronika) </option>
+            <option value="RPL"> PB (Perbankan) </option>
+            <option value="RPL"> AK (Akutansi) </option>
+            
+            
+        </select><br><br>
+
+         <label>Ekskul:</label><br>
+        <input type="checkbox" name="hobi[]" value="basket"> Basket
+        <input type="checkbox" name="hobi[]" value="voli"> Voli
+        <input type="checkbox" name="hobi[]" value="badminton"> Badminton
+        <input type="checkbox" name="hobi[]" value="paskib"> Paskib
+        <input type="checkbox" name="hobi[]" value="pramuka"> Pramuka
+        <input type="checkbox" name="hobi[]" value="pmr"> Palang Merah Remaja<br><br>
+
+       
+        <label for="foto">Upload Foto:</label><br>
+        <input type="file" name="foto" accept="image/*"required><br><br>
+
+        <label for="minat">Minat:</label><br>
+        <textarea name="minat" id="minat" rows="4" cols="40" placeholder="bakat yang anda miliki"required></textarea><br><br>
+
+        <label for="bakat">Bakat:</label><br>
+        <textarea name="bakat" rows="4" cols="40"placeholder="minat anda" required></textarea>
+        <br>
+
+        
+        <input type="submit" value="Kirim">
+    </form>
+    </div>
+
+    
+
+</body>
+</html>
